@@ -12,18 +12,16 @@ bx, by = 350, 300
 t.penup()
 t.goto(x, y)
 
-def position_check():
-    x = -350
-    y = 300
+def position_check(x, y):
     if t.xcor() > bx:
         t.penup()
         y -= 110
-        t.goto(-350, y)
+        t.goto(x, y)
     t.pendown()
 
 
-def create_star():
-    position_check()
+def create_star(x, y):
+    position_check(x, y)
     t.speed(10)
     t.pendown()
     for i in range(5):
@@ -34,7 +32,7 @@ def create_star():
     
 
 for i in range(12):
-    create_star()
+    create_star(x, y)
     if i + 1 == 1:
         message = 'Star Created'
     else:
