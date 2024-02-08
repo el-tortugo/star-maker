@@ -19,7 +19,7 @@ def position_check():
         t.penup()
         y -= 110
         t.goto(-350, y)
-        t.pendown()
+    t.pendown()
 
 
 def create_star():
@@ -34,7 +34,6 @@ def create_star():
     
 
 for i in range(12):
-    message = 'Stars Created!'
     create_star()
     if i + 1 == 1:
         message = 'Star Created'
@@ -44,4 +43,6 @@ for i in range(12):
     print((i + 1), message)
 t.hideturtle()
 input("Mission Complete! Click here and press ENTER ") # keeps turtles from closing prematurely
+
+
 
